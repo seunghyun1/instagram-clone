@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>title</title>
+<link rel="stylesheet" href="../css/bootstrap.css"/>
+<!-- <link rel="stylesheet" href="../css/tingle.css"/> -->
+
+<style>
+	/*.main{
+		height: 100%;
+		width: 70%;
+		background-color:#fafafa;
+		margin: 0 auto;
+	}
+	.saramimg{
+		height: 100px;
+		width:  100px;
+		border-radius: 50px;
+	}
+	.SeeAll{
+		float: right;
+	}
+	.saram{
+		width: 200px;
+		background-color: white;
+		float: left;
+		text-align: center;
+		border: 1px solid #efefef;
+	}
+	p{
+		text-align: center;
+	}
+	.searchImg{
+		width: 80%;
+		height: 80%;
+		margin-bottom: 30px;
+		margin-left: 50px;
+
+	}
+	.search{
+		float: left;
+	}
+	
+	.wrapper{
+		
+		margin-bottom: 20px;
+	}
+	.searchImg:hover{
+		opacity:0.6;
+	}
+	#saramContainer{
+		position: relative;
+		margin-bottom: 20px;
+	}
+	#saram3{
+		position: absolute;
+		margin-left: 750px;
+	}
+	#saram2{
+		position: absolute;
+		margin-left: 450px;
+	}
+	#saram1{
+		margin-left: 150px;
+	}
+	@media(max-width: 650px;){
+		#saramContainer{
+			display: none;
+		}
+
+	}*/
+
+	.SeeAll{
+		float: right;
+	}
+
+	.card-image {
+		width: 40%;
+	    margin-top: 20px;
+	    margin-bottom: 20px;
+	    margin: 20px auto 20px auto;
+	}
+
+	.wrapper .container {
+		width: 60%;
+	}
+	.wrapper{
+		width: 100%;
+		background-color: #f5f5f5;
+	}
+
+	#one{
+
+		background-color: white;
+		border: 1px solid #efefef;
+
+
+	}
+	#two{
+		background-color: white;
+		border: 1px solid #efefef;
+
+	}
+	#three{
+		background-color: white;
+		border: 1px solid #efefef;
+
+	}
+	/*#search{
+		margin-top: 50px;
+		width: 100%;
+	}*/
+	.loader{
+		text-align: center;
+	}
+	@media(max-width: 992px){
+		#saram{
+			display: none;
+			}
+		}
+
+   .insList a{display: inline-block;}
+   
+   .insList:hover .overlay{
+      opacity: 0.7;
+   }
+    #searchImg{
+    	width: 100%;
+    	height:100%;
+    } 
+   	.overlay{
+
+      position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 15px;
+	  right: 15px;
+	  opacity: 0;
+      background: rgba(0,0,0,0.5);
+      text-align: center;
+      margin-bottom: 5px
+
+   } 
+/*   .overlay{
+
+      position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  opacity: 0;
+      background: rgba(0,0,0,0.5);
+      text-align: center;
+   }*/
+
+
+
+/*.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.overlay:hover {
+  opacity: 0.2;
+}*/
+
+/*.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}*/
+
+/*.likeBox{
+
+      font-size:20px;
+      color:#fff;
+      position: relative;
+      top: 45%;
+      text-align: center;
+
+     
+      
+   }*/
+
+
+   #pfont{
+      font-size: 17px;
+      display: inline-block;
+      position: relative;  
+      left: 5px;
+      top: -4px;
+   }
+		
+	 
+   
+	.overlay .glyphicon{
+	  display: inline;	
+      font-size:20px;
+      color:white;
+      position: relative;
+      top: 50%;
+      
+      
+   }
+/*   ul {
+   	list-style-type: none;
+   	margin:0;
+   	padding:0;
+
+   }
+   li{
+   	display:inline;
+	top:50%;
+   }*/
+	
+
+
+</style>
+
+
+</head>
+<body>
+
+	
+
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1" id="tmpList">
+				<!-- 사람찾기 -->
+				<div class="row" id="saram">
+					<h5 style="color:#999;">사람찾기
+					<a href="#" class="SeeAll"><span>See All</span></a></h5>
+					<div class="col-sm-6 col-md-4">
+					  <div class="thumbnail">
+					    <div class="card-image">
+							<a href="#"><img class="img-responsive" src="../images/1234.jpg" style="border-radius: 50%; height: 91px; width: 91px;"/></a>
+						</div>
+					    <div class="caption text-center">
+					      <a href="#" style="text-decoration-line: none; color: black;"><p>Park.hj</p></a>
+					      <p style="color: #999;">박해진</p>
+					      <p><a href="#" class="btn btn-primary" role="button">팔로우</a></p>
+					    </div>
+					  </div>
+					</div>
+
+
+					<div class="col-sm-6 col-md-4">
+					  <div class="thumbnail">
+					    <div class="card-image">
+							<a href="#"><img class="img-responsive" src="../images/12345.jpg" style="border-radius: 50%;
+							height: 91px; width: 91px;"/></a>
+						</div>
+					    <div class="caption text-center">
+					      <a href="#" style="text-decoration-line: none; color: black;"><p>Poo_poo</p></a>
+					      <p style="color: #999;">Ryan</p>
+					      <p><a href="#" class="btn btn-primary" role="button">팔로우</a></p>
+					    </div>
+					  </div>
+					</div>
+
+					<div class="col-sm-6 col-md-4">
+					  <div class="thumbnail">
+					    <div class="card-image">
+							<a href="#" ><img class="img-responsive" src="../images/123456.jpg" style="border-radius: 50%;
+							height: 91px; width: 91px;"/></a>
+						</div>
+					    <div class="caption text-center">
+					      <a href="#" style="text-decoration-line: none; color: black;"><p>Y_na</p></a>
+					      <p  style="color: #999;">윤아</p>
+					      <p><a href="#" class="btn btn-primary" role="button">팔로우</a></p>
+					    </div>
+					  </div>
+					</div>				
+				</div>
+				<!-- /사람찾기 -->
+
+
+				<!-- 둘러보기 -->
+				<header>
+					<h5 style="color:#999;">둘러보기
+				</header>
+				
+				<div class="row" id="search" style="margin-bottom: 20px;">
+					<div class="col-xs-4 insList" >
+		               <a href="#"><div class="overlay"><span class="glyphicon glyphicon-heart"><p id="pfont">131개</p></span><span class="glyphicon glyphicon-pencil" style="margin-left: 20px;"><p id="pfont">24개</p></span></div>
+		                 		<img class="img-responsive" src="../images/in1.png"/></a>
+		             	
+		         	</div>
+				
+				    <div class="col-xs-4 insList">
+		               <a href="#"><div class="overlay"><span class="glyphicon glyphicon-heart"><p id="pfont">1647개</p></span><span class="glyphicon glyphicon-pencil" style="margin-left: 20px;"><p id="pfont">934개</p></span></div>
+		                 <img class="img-responsive" src="../images/in2.png"/></a>
+		            </div>
+
+					<div class="col-xs-4 insList">
+		                 <a href="#"><div class="overlay"><span class="glyphicon glyphicon-heart"><p id="pfont">23개</p></span><span class="glyphicon glyphicon-pencil" style="margin-left: 20px;"><p id="pfont">4개</p></span></div>
+		                 <img class="img-responsive" src="../images/in3.jpg"/></a>
+		            </div>
+				</div> 
+
+
+				<!-- <div class="row" id="search">
+					<div class="col-xs-4" style="padding: 0;margin-bottom: 7px;">
+			            <img src="images/in1.png" alt="Avatar" class="image" style="padding-right: -15px;">
+						<div class="overlay">
+							<div class="text">Hello World</div>
+						</div>
+					</div>
+				</div> -->
+
+				<div class="row" id="search" style="margin-bottom: 20px;">
+					<div class="col-xs-4 insList" >
+		                 <a href="#"><div class="overlay"><span class="glyphicon glyphicon-heart"><p id="pfont">448개</p></span><span class="glyphicon glyphicon-pencil" style="margin-left: 20px;"><p id="pfont">250개</p></span></div>
+		                 <img class="img-responsive" src="../images/in4.jpg"  /></a>
+		         	</div>
+				
+				    <div class="col-xs-4 insList">
+		               <a href="#"><div class="overlay"><span class="glyphicon glyphicon-heart"><p id="pfont">254개</p></span><span class="glyphicon glyphicon-pencil" style="margin-left: 20px;"><p id="pfont">87개</p></span></div>
+		                 <img class="img-responsive" src="../images/in5.jpg"/></a>
+		            </div>
+
+					<div class="col-xs-4 insList">
+		                 <a href="#"><div class="overlay"><span class="glyphicon glyphicon-heart"><p id="pfont">113개</p></span><span class="glyphicon glyphicon-pencil" style="margin-left: 20px;"><p id="pfont">35개</p></span></div>
+		                 <img class="img-responsive" src="../images/in6.jpg"/></a>
+		            </div>
+				</div> 
+
+				<div class="row" id="search" style="margin-bottom: 20px;">
+					<div class="col-xs-4 insList" >
+		                 <a href="#"><div class="overlay"><span class="glyphicon glyphicon-heart"><p id="pfont">167개</p></span><span class="glyphicon glyphicon-pencil" style="margin-left: 20px;"><p id="pfont">37개</p></span></div>
+		                 <img class="img-responsive" src="../images/in7.jpg"  /></a>
+		         	</div>
+				
+				    <div class="col-xs-4 insList">
+		               <a href="#"><div class="overlay"><span class="glyphicon glyphicon-heart"><p id="pfont">297개</p></span><span class="glyphicon glyphicon-pencil" style="margin-left: 20px;"><p id="pfont">137개</p></span></div>
+		                 <img class="img-responsive" src="../images/in8.jpg"/></a>
+		            </div>
+
+					<div class="col-xs-4 insList">
+		                 <a href="#"><div class="overlay"><span class="glyphicon glyphicon-heart"><p id="pfont">397개</p></span><span class="glyphicon glyphicon-pencil" style="margin-left: 20px;"><p id="pfont">150개</p></span></div>
+		                 <img class="img-responsive" src="../images/in9.png"/></a>
+		            </div>
+				</div> 
+
+
+
+				<div class="row" id="photoList" style="margin-bottom: 20px; display: none; ">
+					<div class="col-xs-4 insList" >
+		                 <a href="#"><div class="overlay"><span class="glyphicon glyphicon-heart"><p id="pfont">513개</p></span><span class="glyphicon glyphicon-pencil" style="margin-left: 20px;"><p id="pfont">371개</p></span></div>
+		                 <img class="img-responsive" src="../images/in10.jpg"  /></a>
+		         	</div>
+				
+				    <div class="col-xs-4 insList">
+		               <a href="#"><div class="overlay"><span class="glyphicon glyphicon-heart"><p id="pfont">137개</p></span><span class="glyphicon glyphicon-pencil" style="margin-left: 20px;"><p id="pfont">35개</p></span></div>
+		                 <img class="img-responsive" src="../images/in11.jpg"/></a>
+		            </div>
+
+					<div class="col-xs-4 insList">
+		                 <a href="#"><div class="overlay"><span class="glyphicon glyphicon-heart"><p id="pfont">997개</p></span><span class="glyphicon glyphicon-pencil" style="margin-left: 20px;"><p id="pfont">334개</p></span></div>
+		                 <img class="img-responsive" src="../images/in12.jpg"/></a>
+		            </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin-top:200px;">
+			<div id="mainNav" class="col-lg-8 col-sm-offset-1">
+				<div class="links">
+					 <a href="#">INSTAGRAM정보</a>
+					 <a href="#">지원</a>
+					 <a href="#">블로그</a>
+					 <a href="#">홍보 센터</a>
+					 <a href="#">API</a>
+					 <a href="#">채용정보</a>
+					 <a href="#">개인정보처리방침</a>
+					 <a href="#">약관</a>
+					 <a href="#">디렉터리</a>
+					 <a href="#">언어</a>
+				</div>
+			</div>
+			<div id="copyright" class="col-lg-2">
+				<div class="copyright">
+					© 2017 INSTAGRAM
+				</div>
+			</div>
+		</div>
+	<!-- </div> -->
+<div class="loader"><img src="../images/8.gif" alt="로딩 이미지"></div>
+
+
+
+<script src="../js/jquery-3.2.1.js"></script>
+<script src="../js/bootstrap.js"></script>
+
+<script>
+
+
+// var modal = new tingle.modal({
+//     footer: true,
+//     stickyFooter: false,
+//     closeMethods: ['overlay', 'button', 'escape'],
+//     closeLabel: "Close",
+//     cssClass: ['custom-class-1', 'custom-class-2'],
+//     onOpen: function() {
+//         console.log('modal open');
+//     },
+//     onClose: function() {
+//         console.log('modal closed');
+//     },
+//     beforeClose: function() {
+//         // here's goes some logic
+//         // e.g. save content before closing the modal
+//         return true; // close the modal
+//     	return false; // nothing happens
+//     }
+// });
+
+
+
+
+
+		$(window).on("scroll", function(){
+		console.log("scroll!");
+
+		
+		var scrollTop=$(window).scrollTop();
+		
+		var windowHeight=$(window).height();
+		
+		var documentHeight=$(document).height();
+
+		
+		$("#sTop").text("scrollTop:"+scrollTop);
+		$("#wHeight").text("windowHeight:"+windowHeight);
+		$("#dHeight").text("documentHeight:"+documentHeight);
+
+		
+
+		var isBottom = documentHeight == scrollTop+windowHeight;
+		if(isBottom){
+			
+			$(".loader").show();
+			
+			setTimeout(function(){
+				
+
+
+				var newPhotoList = $("#photoList").clone();
+				newPhotoList.show();
+				$('#tmpList').append(newPhotoList);
+
+				
+				$(".loader").hide();
+			}, 2000); 
+		}
+
+	});
+
+		// var overlay = $(".insList")
+
+		// $(".overlay").click(function(){
+		// 		modal.setContent('<img style="width:80%; ma" class="img-responsive" src="images/in2.png"/> ');
+		// 		// modal.setContent('<p>asdasdasdasdasdasd<p>');
+		// 		// modal.getContent(overlay);
+
+		// 		modal.open();
+
+		// 	});
+		 // $("#search .col-xs-4").mouseover(function(){
+		 // 	console.log("mouseover");
+		 	
+
+
+	// 	 });
+		 	// $("#searchImg").mouseover(function(){
+		 	// 		$(".overlay").show({
+		 	// 			opacity: 0.7;
+		 	// 		});
+		 	// });
+
+</script>
+</body>
+</html>
